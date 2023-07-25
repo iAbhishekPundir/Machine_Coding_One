@@ -1,110 +1,58 @@
-export const fakeFetch = (url) => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if (url === 'https://example.com/api/books') {
-          resolve({
-            status: 200,
-            message: 'Success',
-            data: {
-              books: [
-                {
-                  id: 1,
-                  title: 'To Kill a Mockingbird',
-                  author: 'Harper Lee',
-                  publisher: 'HarperCollins',
-                  year: 1960,
-                  image:
-                    'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/41j-s9fHJcL.jpg',
-                  price: 9.99,
-                  read: false,
-                  currentlyReading: true,
-                  wantToRead: false,
-                  none: false
-                },
-                {
-                  id: 2,
-                  title: '1984',
-                  author: 'George Orwell',
-                  publisher: 'Penguin Books',
-                  year: 1949,
-                  image:
-                    'https://m.media-amazon.com/images/I/71kxa1-0mfL.jpg',
-                  price: 8.99,
-                  read: false,
-                  currentlyReading: true,
-                  wantToRead: false,
-                  none: false
-                },
-                {
-                  id: 3,
-                  title: 'The Catcher in the Rye',
-                  author: 'J.D. Salinger',
-                  publisher: 'Little, Brown and Company',
-                  year: 1951,
-                  image:
-                    'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/91HPG31dTwL.jpg',
-                  price: 10.99,
-                  currentlyReading: false,
-                  wantToRead: true,
-                  read: false,
-                  none: false
-                },
-                {
-                  id: 4,
-                  title: 'The Great Gatsby',
-                  author: 'F. Scott Fitzgerald',
-                  publisher: 'Scribner',
-                  year: 1925,
-                  image:
-                    'https://m.media-amazon.com/images/I/71FTb9X6wsL.jpg',
-                  price: 7.99,
-                  currentlyReading: false,
-                  wantToRead: true,
-                  read: false,
-                  none: false
-                },
-                {
-                  id: 5,
-                  title: 'Brave New World',
-                  author: 'Aldous Huxley',
-                  publisher: 'Harper Perennial Modern Classics',
-                  year: 1932,
-                  image:
-                    'https://pagdandi.org/wp-content/uploads/2021/04/Brave-New-World.jpg',
-                  price: 12.99,
-                  currentlyReading: false,
-                  wantToRead: false,
-                  read: true,
-                  none: false
-                },
-                {
-                  id: 6,
-                  title: 'Pride and Prejudice',
-                  author: 'Jane Austen',
-                  publisher: 'Penguin Classics',
-                  year: 1813,
-                  image:
-                    'https://m.media-amazon.com/images/I/71Q1tPupKjL.jpg',
-                  price: 6.99,
-                  currentlyReading: false,
-                  wantToRead: false,
-                  read: true,
-                  none: false
-                },
-              ],
-              user: {
-                name: 'Raju',
-                bio: '25 din mein paisa double',
-                img: 'https://static-koimoi.akamaized.net/wp-content/new-galleries/2022/12/no-akshay-kumar-no-hera-pheri-3-finally-worked-producers-to-bring-back-khiladi-001.jpg',
-              },
-            },
-          })
-        } else {
-          reject({
-            status: 404,
-            message: 'Books list not found.',
-          })
-        }
-      }, 2000)
-    })
+export const books= [
+  {
+    img:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/330px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg",
+    title: "To Kill a Mockingbird",
+    author: "Harper Lee",
+    status: "Read"
+  },
+  {
+    img:
+      "https://images-eu.ssl-images-amazon.com/images/I/61fo4siBqRL._AC_UL210_SR210,210_.jpg",
+    title: " India 1984",
+    author: "George Orwell",
+    status: "Read"
+  },
+  {
+    img:
+      "https://m.media-amazon.com/images/I/819HSIKiWdS._AC_UF1000,1000_QL80_.jpg",
+    title: "Pride and Prejudice",
+    author: "Jane Austen",
+    status: "Currently Reading"
+  },
+  {
+    img:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg/330px-The_Great_Gatsby_Cover_1925_Retouched.jpg",
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    status: "none"
+  },
+  {
+    img:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFyPQk7DDKwqhRTX0i79HKxe8AvkWEbKbXrg&usqp=CAU",
+    title: " A Brief  of Humankind",
+    author: "Yuval Noah Harari",
+    status: "Currently Reading"
+  },
+  {
+    img:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/The_Catcher_In_The_Rye_%2814353822692%29.jpg/1200px-The_Catcher_In_The_Rye_%2814353822692%29.jpg?20170326210040",
+    title: "The Catcher in the Rye",
+    author: "J.D. Salinger",
+    status: "Currently Reading"
+  },
+  {
+    img:
+      "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_.jpg",
+    title: "The Lord of the Rings",
+    author: "J.R.R. Tolkien",
+    status: "Want to Read"
+  },
+  {
+    img:
+      "https://m.media-amazon.com/images/I/81ym3QUd3KL._AC_UF1000,1000_QL80_.jpg",
+    title: "Dune",
+    author: "Frank Herbert",
+    status: "Want to Read"
   }
+]
